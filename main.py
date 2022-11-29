@@ -7,6 +7,10 @@ from nltk.stem.porter import PorterStemmer
 
 ps = PorterStemmer()
 
+st.set_page_config(
+    page_title="Female Diabetes Prediction",
+    page_icon="🧊")
+
 
 def transform_text(text):
     text = text.lower()
