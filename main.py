@@ -8,9 +8,8 @@ from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
 st.set_page_config(
-    page_title="Female Diabetes Prediction",
+    page_title="SMS Spam Detector",
     page_icon="🧊")
-
 
 def transform_text(text):
     text = text.lower()
@@ -33,7 +32,7 @@ model = pickle.load(open("model.pkl", "rb"))
 
 st.title("SMS Spam Detector")
 
-sms = st.text_input("Enter the message")
+sms = st.text_area("Enter the message")
 
 if st.button("Predict"):
     # 1. preprocess
